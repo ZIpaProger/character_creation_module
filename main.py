@@ -6,20 +6,17 @@ def attack(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
         return (
             f'{char_name} нанёс урон противнику равный '
-            f'{5 + randint(3, 5)}'
-            )
+            f'{5 + randint(3, 5)}')
 
     if char_class == 'mage':
         return (
             f'{char_name} нанёс урон противнику равный '
-            f'{5 + randint(5, 10)}'
-            )
+            f'{5 + randint(5, 10)}')
 
     if char_class == 'healer':
         return (
             f'{char_name} нанёс урон противнику равный '
-            f'{5 + randint(-3, -1)}'
-            )
+            f'{5 + randint(-3, -1)}')
 
     return ('Противник остался безнаказанным.')
 
@@ -29,20 +26,17 @@ def defence(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
         return (
             f'{char_name} блокировал '
-            f'{10 + randint(5, 10)} урона'
-            )
+            f'{10 + randint(5, 10)} урона')
 
     if char_class == 'mage':
         return (
             f'{char_name} блокировал '
-            f'{10 + randint(-2, 2)} урона'
-            )
+            f'{10 + randint(-2, 2)} урона')
 
     if char_class == 'healer':
         return (
             f'{char_name} блокировал '
-            f'{10 + randint(2, 5)} урона'
-            )
+            f'{10 + randint(2, 5)} урона')
 
     return (f'{char_name} не подвергся нападению.')
 
@@ -52,20 +46,17 @@ def special(char_name: str, char_class: str) -> str:
     if char_class == 'warrior':
         return (
             f'{char_name} применил специальное умение '
-            f'«Выносливость {80 + 25}»'
-            )
+            f'«Выносливость {80 + 25}»')
 
     if char_class == 'mage':
         return (
             f'{char_name} применил специальное умение '
-            f'«Атака {5 + 40}»'
-            )
+            f'«Атака {5 + 40}»')
 
     if char_class == 'healer':
         return (
             f'{char_name} применил специальное умение '
-            f'«Защита {10 + 30}»'
-            )
+            f'«Защита {10 + 30}»')
 
     return (f'{char_name} не применил специальное умение.')
 
@@ -107,14 +98,14 @@ def start_training(char_name: str, char_class: str) -> str:
 
 def choice_char_class() -> str:
 
-    approve_choice: None = None
-    char_class: None = None
+    approve_choice: str = ''
+    char_class: str = ''
 
     while approve_choice != 'y':
 
         char_class: str = input('Введи название персонажа, за которого '
-                           'хочешь играть: Воитель — '
-                           'warrior, Маг — mage, Лекарь — healer: ')
+                                'хочешь играть: Воитель — '
+                                'warrior, Маг — mage, Лекарь — healer: ')
 
         if char_class == 'warrior':
             print('Воитель — дерзкий воин ближнего боя. Сильный, '
@@ -129,8 +120,8 @@ def choice_char_class() -> str:
                   'Черпает силы из природы, веры и духов.')
 
         approve_choice: str = input('Нажми (Y), чтобы подтвердить выбор, '
-                               'или любую другую кнопку, чтобы выбрать '
-                               'другого персонажа ').lower()
+                                    'или любую другую кнопку, чтобы выбрать '
+                                    'другого персонажа ').lower()
 
     return char_class
 
