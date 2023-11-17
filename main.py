@@ -1,9 +1,12 @@
+"""This programm create for U.
+U should choose a character for U want to play
+and training your skill.
+"""
 from random import randint
 
-from graphic_arts.start_game_banner import run_screensaver
 
 def attack(char_name: str, char_class: str) -> str:
-
+    """Функция тренировки атаки."""
     if char_class == 'warrior':
         return (
             f'{char_name} нанёс урон противнику равный '
@@ -23,7 +26,7 @@ def attack(char_name: str, char_class: str) -> str:
 
 
 def defence(char_name: str, char_class: str) -> str:
-
+    """Функция тренировки защитыю."""
     if char_class == 'warrior':
         return (
             f'{char_name} блокировал '
@@ -43,7 +46,7 @@ def defence(char_name: str, char_class: str) -> str:
 
 
 def special(char_name: str, char_class: str) -> str:
-
+    """Функция тренировки специаьной способности."""
     if char_class == 'warrior':
         return (
             f'{char_name} применил специальное умение '
@@ -63,7 +66,7 @@ def special(char_name: str, char_class: str) -> str:
 
 
 def start_training(char_name: str, char_class: str) -> str:
-
+    """Функция предоставления выбора персонажа игры."""
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — отличный боец ближнего боя.')
 
@@ -98,7 +101,7 @@ def start_training(char_name: str, char_class: str) -> str:
 
 
 def choice_char_class() -> str:
-
+    """Функция выбора персонажа."""
     approve_choice: str = ''
     char_class: str = ''
 
